@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+/* FUTURISTIC PREMIUM ULTRA-MODERN ANIMATIONS */
+
+@keyframes pulse-soft {
+  0%, 100% {
+    opacity: 0.15;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.35;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes scanline {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes slow-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes slow-spin-reverse {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes particle-drift {
+  0% {
+    transform: translateY(0) scale(0.6);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.5;
+  }
+  90% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(-120px) translateX(var(--drift-x, 20px)) scale(1.1);
+    opacity: 0;
+  }
+}
+
+@keyframes subtle-glitch {
+  0%, 100% { transform: translate(0) scale(1); filter: hue-rotate(0deg); }
+  20% { transform: translate(-1px, 1px) scale(0.99); filter: hue-rotate(5deg); }
+  40% { transform: translate(1px, -1px) scale(1.01); filter: hue-rotate(-5deg); }
+  60% { transform: translate(-0.5px, -0.5px) scale(1); }
+  80% { transform: translate(1px, 1px) scale(0.995); }
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 6s infinite ease-in-out;
+}
+
+.animate-scanline {
+  animation: scanline 8s infinite linear;
+}
+
+.animate-spin-slow {
+  animation: slow-spin 25s infinite linear;
+}
+
+.animate-spin-slow-reverse {
+  animation: slow-spin-reverse 35s infinite linear;
+}
+
+.animate-particle-drift {
+  animation: particle-drift var(--duration, 10s) infinite linear;
+}
+
+.animate-glitch {
+  animation: subtle-glitch 5s infinite ease-in-out;
+}
+
+/* Blur backdrop adjustments and neon styling */
+.backdrop-blur-glass {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* Custom scrollbar for modern developer aesthetic */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(10, 10, 12, 0.5);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.25);
+}

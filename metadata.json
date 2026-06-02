@@ -1,0 +1,6 @@
+{
+  "name": "Connected Health Coach",
+  "description": "An interactive, ultra-polished health coach landing page featuring a responsive glowing spectrum ribbon.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
